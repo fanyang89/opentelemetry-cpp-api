@@ -72,14 +72,13 @@ option(OPENTELEMETRY_INSTALL "Whether to install opentelemetry targets"
 
 include("${opentelemetry-cpp_SOURCE_DIR}/cmake/tools.cmake")
 include(GNUInstallDirs)
+include("${opentelemetry-cpp_SOURCE_DIR}/cmake/otel-install-functions.cmake")
 
 if(WITH_GSL)
   include("${opentelemetry-cpp_SOURCE_DIR}/cmake/ms-gsl.cmake")
 endif()
 
 add_subdirectory(api)
-
-include("${opentelemetry-cpp_SOURCE_DIR}/cmake/otel-install-functions.cmake")
 include(CMakePackageConfigHelpers)
 
 if(OPENTELEMETRY_INSTALL)
