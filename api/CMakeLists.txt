@@ -11,10 +11,6 @@ set_target_properties(opentelemetry_api PROPERTIES EXPORT_NAME api)
 
 unset(TARGET_DEPS)
 
-if(BUILD_TESTING)
-  add_subdirectory(test)
-endif()
-
 if(WITH_NO_DEPRECATED_CODE)
   target_compile_definitions(opentelemetry_api
                              INTERFACE OPENTELEMETRY_NO_DEPRECATED_CODE)
